@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Assignment Scheduler{% endblock %}</title>
+    <!-- Add links to CSS files here if needed -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Add header content here -->
+        <h1>Assignment Scheduler</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <!-- Add more navigation links here as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Content from child templates will be inserted here -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <!-- Add footer content here -->
+        <p>&copy; 2024 Assignment Scheduler</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* CSS styles go here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+button {
+    width: calc(100% - 22px);
+    margin: 8px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus,
+button:focus {
+    outline: none;
+    background-color: #e0e0e0;
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.message {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+    display: none;
+}

@@ -1,0 +1,116 @@
+body {
+    background-color: white;
+  }
+  
+  .head {
+    margin-top: 1%;
+    margin-left: -0.5%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  .log {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    color: #081b29;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    margin-right: 10%;
+  }
+  
+  .LI {
+    z-index: 1;
+    overflow: hidden;
+    transform: .5s;
+    letter-spacing: 1px;
+    background: #081b29;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #081b29;
+    color: white;
+    font-size: 18.5px;
+    margin-right: 5px;
+    text-decoration: none;
+  }
+  
+  .FA {
+    color: #081b29;
+    font-size: 18.5px;
+    text-decoration: none;
+  }
+  
+  .FA:hover {
+    color: grey;
+  }
+  
+  .sidebar {
+    margin-top: 4%;
+    height: calc(100% - 30px); /* Make the sidebar take remaining height of the viewport */
+    width: 300px; /* Increase the width of the sidebar */
+    position: fixed; /* Fixed position - stays in place even when scrolling */
+    top: 30px; /* Position from the top */
+    left: 0; /* Position from the left */
+    background-color: #333; /* Background color of the sidebar */
+    padding-top: 40px; /* Add more padding at the top */
+    border-radius: 5px;
+  }
+  
+  /* Style links in the sidebar */
+  .sidebar a {
+    padding: 15px; /* Increase padding to the links */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: #fff; /* Set text color */
+    display: block; /* Display links as block elements */
+  }
+  
+  /* Change the color of links on hover */
+  .sidebar a:hover {
+    background-color: #555; /* Change background color */
+  }
+  
+  
+  /* Styles for notifications */
+  .notifications {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .notification-icon {
+    font-size: 24px;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  /* Styles for sections */
+  section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwatito Olubakinde - Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1><u>Oluwatito Olubakinde - Portfolio</u></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://www.microsoft.com/">Visit Microsoft</a></li> <!-- Absolute link -->
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Projects</h2>
+            <ol>
+                <li>Project 1: Personal Website</li>
+                <li>Project 2: Online Portfolio</li>
+                <li>Project 3: Software Engineering Projects</li>
+            </ol>
+            <img src="image/image.x.jpg" alt="Portfolio Image" width="400"> <!-- Picture from Image folder -->
+        </section>
+
+        <section>
+            <h2><u>Contact Form</u></h2>
+            <form>
+                <label for="textbox">Text Box:</label><br>
+                <input type="text" id="textbox" name="textbox"><br><br>
+
+                <label for="textarea">Textarea:</label><br>
+                <textarea id="textarea" name="textarea" rows="4" cols="50">Default text</textarea><br><br>
+
+                <label>Radio Buttons:</label><br>
+                <input type="radio" id="option1" name="radio" value="option1" checked>
+                <label for="option1">Option 1</label><br>
+                <input type="radio" id="option2" name="radio" value="option2">
+                <label for="option2">Option 2</label><br><br>
+
+                <label>Checkboxes:</label><br>
+                <input type="checkbox" id="checkbox1" name="checkbox1" value="checkbox1">
+                <label for="checkbox1">Checkbox 1</label><br>
+                <input type="checkbox" id="checkbox2" name="checkbox2" value="checkbox2">
+                <label for="checkbox2">Checkbox 2</label><br><br>
+
+                <input type="button" value="Show Alert" onclick="alert('You clicked the button!')"><br><br>
+
+                <label for="selectbox">Select Box:</label><br>
+                <select id="selectbox" name="selectbox">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select><br><br>
+
+                <label for="datalist">Datalist:</label><br>
+                <input list="options" id="datalist" name="datalist"><br>
+                <datalist id="options">
+                    <option value="Option 1">
+                    <option value="Option 2">
+                    <option value="Option 3">
+                </datalist><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+            <!-- Comments indicating the creation of a form -->
+            <!-- Added a form for the user to submit data -->
+
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="second_page.html">About Me - page2</a></li> <!-- Relative link -->
+                <li><a href="Folder3/third_page.html">Contact Me - page3</a></li> <!-- Relative link to contact page -->
+                <li><a href="#top">Back to Top</a></li> <!-- Link to top of the main page -->
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

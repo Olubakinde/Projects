@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="file"],
+        button {
+            width: calc(100% - 22px);
+            margin: 8px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f3f3f3;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="file"]:focus,
+        button:focus {
+            outline: none;
+            background-color: #e0e0e0;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #007bff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: none;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .message {
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Event Registration</h1>
+        </div>
+        <div class="form-container">
+            <form id="registration-form" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="event">Select Event:</label><br>
+                    <select id="event" name="event">
+                        <option value="school_carnival">School Carnival</option>
+                        <option value="sports_day">Sports Day</option>
+                        <option value="music_concert">Music Concert</option>
+                        <!-- Add more event options as needed -->
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="student_id">Student ID:</label><br>
+                    <input type="text" id="student_id" name="student_id" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="photo">Photo:</label><br>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <button type="submit">Register</button>
+                <div id="loader" class="loader"></div>
+                <div id="message" class="message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+project/
+├── app/
+│   ├── static/
+│   │   └── style.css
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   └── dashboard.html
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   └── forms.py
+├── db.sqlite
+├── config.py
+└── run.py

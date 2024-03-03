@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique ID Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #id-template {
+            max-width: 400px;
+            padding: 40px;
+            background: linear-gradient(to bottom right, #007bff, #00bcd4); /* Gradient Background */
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease; /* Box Shadow Animation */
+        }
+
+        #id-template:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Box Shadow Animation on Hover */
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        #id-info {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        #qrcode {
+            margin-top: 20px;
+        }
+
+        .ud-logo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .ud-logo:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="id-template">
+        <h1>Unique ID</h1>
+        <div id="id-info">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> john@example.com</p>
+            <p><strong>Student ID:</strong> 1234567890</p>
+            <div id="qrcode"></div>
+        </div>
+        <a href="https://www.udel.edu/" target="_blank" class="ud-logo">
+            <img src="ud-logo.png" alt="University of Delaware Logo">
+        </a>
+    </div>
+
+    <script>
+        const name = "John Doe";
+        const email = "john@example.com";
+        const studentId = "1234567890";
+        const uniqueId = `${name}-${email}-${studentId}`;
+
+        const idInfoElement = document.getElementById("id-info");
+        idInfoElement.innerHTML += `<p><strong>Unique ID:</strong> ${uniqueId}</p>`;
+
+        const qrCodeElement = document.getElementById("qrcode");
+        new QRCode(qrCodeElement, {
+            text: uniqueId,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>

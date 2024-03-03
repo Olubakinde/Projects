@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Registration</h1>
+        <form id="registration-form" enctype="multipart/form-data">
+            <label for="event">Select Event:</label><br>
+            <select id="event" name="event">
+                <option value="school_carnival">School Carnival</option>
+                <option value="sports_day">Sports Day</option>
+                <option value="music_concert">Music Concert</option>
+                <!-- Add more event options as needed -->
+            </select><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="student_id">Student ID:</label><br>
+            <input type="text" id="student_id" name="student_id" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="photo">Photo:</label><br>
+            <input type="file" id="photo" name="photo" accept="image/*" required><br>
+            <button type="submit">Register</button>
+            <div id="loader" class="loader"></div>
+            <div id="message" class="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
